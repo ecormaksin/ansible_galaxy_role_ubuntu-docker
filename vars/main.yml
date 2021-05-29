@@ -1,2 +1,14 @@
 ---
 # vars file for ansible_galaxy_role_ubuntu-docker
+
+docker:
+  gpg:
+    key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      dist:
+        path: /usr/share/keyrings/docker-archive-keyring.gpg
+  deb:
+    url: https://download.docker.com/linux/ubuntu
+    sources:
+      list:
+        path: /etc/apt/sources.list.d/docker.list
