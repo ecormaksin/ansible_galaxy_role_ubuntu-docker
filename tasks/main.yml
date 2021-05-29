@@ -16,7 +16,7 @@
 - name: "Docker | Check GPG key file"
   become: yes
   ignore_errors: yes
-  command: ls {{ docker.gpg.key.dist.path }} >/dev/null
+  shell: ls {{ docker.gpg.key.dist.path }} >/dev/null
   register: ls_gpg_key_result
 
 - name: "Docker | Debug GPG key ls result"
