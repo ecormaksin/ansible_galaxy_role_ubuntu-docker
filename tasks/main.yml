@@ -21,6 +21,7 @@
 
 - name: "Docker | Debug GPG key ls result"
   become: yes
+  ignore_errors: yes
   debug:
     msg: "{{ ls_gpg_key_result.rc }}"
 
